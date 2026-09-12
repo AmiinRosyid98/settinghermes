@@ -707,67 +707,7 @@ TELEGRAM_ALLOWED_USERS=123456789</pre>
     </div>
   </section>
 
-  <!-- 13 — REAL PROFILE -->
-  <section class="slide" data-section="6 — Login Sebagai Kamu">
-    <div class="slide-inner">
-      <span class="eyebrow">6 — Login Sebagai Kamu</span>
-      <h2 class="title">Browsing Pakai Akun Sendiri</h2>
-      <div class="term">
-        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">config.yaml</span></div>
-        <pre class="term-body">browser:
-  use_real_profile: true</pre>
-      </div>
-      <div class="callout warn">
-        <span class="label">Khusus Windows</span>
-        Chrome/Edge/Brave harus <b>benar-benar tertutup total</b> (termasuk proses tray) sebelum Hermes bisa menyalin profilnya — kalau tidak, gagal dengan pesan yang jelas, bukan hang diam-diam.
-      </div>
-      <p class="lead" style="font-size:.88rem;"><code class="mono">browser.real_profile_autoclose: true</code> → Hermes bisa <i>menawarkan</i> menutup browser buat kamu (selalu minta izin dulu, tidak pernah paksa).</p>
-      <div class="callout good" style="font-size:.86rem;">Consent-gated, bukan sandbox — halaman yang dibuka benar-benar login sebagai kamu. Default: mati.</div>
-    </div>
-  </section>
-
-  <!-- 14 — HEADED MODE / CONNECT -->
-  <section class="slide" data-section="6 — Mode Lanjutan">
-    <div class="slide-inner">
-      <span class="eyebrow">6 — Mode Lanjutan</span>
-      <h2 class="title">Lihat Browser-nya Bekerja</h2>
-      <div class="term">
-        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">config.yaml</span></div>
-        <pre class="term-body">browser:
-  headed: true</pre>
-      </div>
-      <p class="lead" style="font-size:.92rem;">Berguna kalau ada CAPTCHA/2FA yang perlu diselesaikan manual di tengah sesi.</p>
-      <div class="term">
-        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">CLI only — hermes / hermes chat</span></div>
-        <pre class="term-body">/browser connect
-/browser status
-/browser disconnect</pre>
-      </div>
-      <div class="callout warn" style="font-size:.86rem;">Hanya jalan di CLI terminal — <b>tidak bisa</b> dipanggil dari chat Telegram.</div>
-    </div>
-  </section>
-
-  <!-- 15 — DOKUMEN LANJUTAN -->
-  <section class="slide" data-section="7 — Lanjutan">
-    <div class="slide-inner wide">
-      <span class="eyebrow">7 — Dokumen Lanjutan</span>
-      <h2 class="title">Kalau Butuh Lebih Dalam</h2>
-      <p class="lead" style="font-size:.9rem;">Untuk integrasi spesifik proyek AAM/PrahuHub, lihat file lain di folder yang sama:</p>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Topik</th><th>File</th></tr></thead>
-          <tbody>
-            <tr><td>Mattermost Boards, Figma, Drive, workflow bug/task</td><td><code>CommandforMarbot.md</code></td></tr>
-            <tr><td>Setup OAuth Google Drive dari nol</td><td><code>GOOGLE_DRIVE_SETUP.md</code></td></tr>
-            <tr><td>Riwayat &amp; gotcha teknis mesin ini</td><td><code>SETUP_PROGRESS.md</code></td></tr>
-            <tr><td>Template generik (cron, keamanan)</td><td><code>TEAM_HERMES_SETUP_GUIDE.md</code></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- 16 — CLOSING -->
+  <!-- 13 — CLOSING -->
   <section class="slide" data-section="Selesai">
     <div class="slide-inner hero">
       <span class="eyebrow wing">🪽 Selesai</span>
@@ -787,7 +727,7 @@ TELEGRAM_ALLOWED_USERS=123456789</pre>
 <nav class="navbar">
   <span class="section-now" id="sectionNow">Mulai</span>
   <div class="nav-controls">
-    <span class="counter" id="counter">1 / 16</span>
+    <span class="counter" id="counter">1 / 13</span>
     <button class="nav-btn" id="prevBtn" aria-label="Slide sebelumnya">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
     </button>
