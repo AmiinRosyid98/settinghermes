@@ -509,6 +509,15 @@
         <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">cmd — tidak perlu Run as Administrator</span></div>
         <pre class="term-body">powershell -Command "iex (irm https://hermes-agent.nousresearch.com/install.ps1)"</pre>
       </div>
+      <div class="term term-output">
+        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">→ contoh output (dipersingkat)</span></div>
+        <pre class="term-body"><span class="rem">Detecting Windows environment...
+Installing Python, Node.js, ripgrep, ffmpeg...
+Setting up virtual environment...</span>
+
+<span class="ok">✓</span> Hermes Agent installed successfully.
+Run 'hermes setup' to configure your provider.</pre>
+      </div>
       <p class="lead" style="font-size:.84rem;">Installer resminya script PowerShell asli — tidak ada versi <code class="mono">cmd</code>/<code class="mono">.bat</code>-nya. Tapi kamu tidak perlu buka PowerShell manual: baris di atas dijalankan dari jendela <b>Command Prompt</b>, cuma menitipkan satu perintah ke engine PowerShell lalu langsung kembali ke <code class="mono">cmd</code>. Semua <code class="mono">hermes ...</code> sesudah ini murni <code class="mono">cmd</code>.</p>
       <div class="table-wrap">
         <table>
@@ -525,6 +534,19 @@
         <pre class="term-body">hermes --version
 hermes doctor</pre>
       </div>
+      <div class="term term-output">
+        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">→ contoh output (disederhanakan)</span></div>
+        <pre class="term-body">Hermes Agent vX.Y.Z &middot; Python 3.11.x
+
+🩺 Hermes Doctor
+<span class="ok">✓</span> Python environment
+<span class="ok">✓</span> Required packages
+<span class="ok">✓</span> Configuration files
+<span class="ok">✓</span> Auth providers
+<span class="ok">✓</span> Directory structure
+
+Tidak ada masalah ditemukan.</pre>
+      </div>
     </div>
   </section>
 
@@ -536,6 +558,15 @@ hermes doctor</pre>
       <div class="term">
         <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">cmd atau PowerShell</span></div>
         <pre class="term-body">hermes setup</pre>
+      </div>
+      <div class="term term-output">
+        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">→ contoh tampilan wizard</span></div>
+        <pre class="term-body"><span class="rem">?</span> Pilih provider AI:
+  <span class="kw">❯ Anthropic (Claude)</span>
+    OpenRouter
+    Nous Portal
+
+<span class="ok">✓</span> Provider tersimpan ke config.yaml</pre>
       </div>
       <p class="lead">Wizard interaktif akan tanya provider (Anthropic, OpenRouter, Nous Portal, dll.) dan model.</p>
       <div class="callout good">
@@ -588,6 +619,12 @@ hermes doctor</pre>
             <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
             <pre class="term-body">hermes gateway setup</pre>
           </div>
+          <div class="term term-output">
+            <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">→ contoh wizard</span></div>
+            <pre class="term-body"><span class="rem">?</span> Platform: <span class="kw">❯ Telegram</span>
+<span class="rem">?</span> Bot token: ********
+<span class="ok">✓</span> tersimpan</pre>
+          </div>
           <p>Pilih Telegram, masukkan token + User ID — wizard yang menulis konfigurasinya.</p>
         </div>
         <div class="col">
@@ -622,6 +659,12 @@ TELEGRAM_ALLOWED_USERS=123456789</pre>
       <div class="term">
         <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">cmd atau PowerShell — foreground, Ctrl+C untuk stop</span></div>
         <pre class="term-body">hermes gateway run</pre>
+      </div>
+      <div class="term term-output">
+        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">→ contoh output (log berjalan)</span></div>
+        <pre class="term-body"><span class="rem">[gateway]</span> Starting Hermes gateway...
+<span class="rem">[telegram]</span> <span class="ok">Connected to Telegram (polling mode)</span>
+<span class="rem">[telegram]</span> Listening for messages...</pre>
       </div>
       <p class="lead">Kirim pesan apa saja ke bot-nya di Telegram untuk tes koneksi.</p>
       <div class="callout warn">
@@ -688,7 +731,15 @@ TELEGRAM_ALLOWED_USERS=123456789</pre>
         <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">cmd atau PowerShell</span></div>
         <pre class="term-body">hermes tools list</pre>
       </div>
-      <p class="lead" style="font-size:.9rem;">Cari baris <span class="token"><span class="ok">✓</span> enabled&nbsp; browser&nbsp; 🌐 Browser Automation</span></p>
+      <div class="term term-output">
+        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">→ output asli (dipersingkat)</span></div>
+        <pre class="term-body">Built-in toolsets (cli):
+  <span class="ok">✓</span> enabled  web        🔍 Web Search &amp; Scraping
+  <span class="ok" style="color:var(--accent-strong); font-weight:600;">✓ enabled  browser    🌐 Browser Automation</span>
+  <span class="ok">✓</span> enabled  terminal   💻 Terminal &amp; Processes
+  <span class="ok">✓</span> enabled  file       📁 File Operations
+<span class="rem">  ... dan ~15 baris lainnya</span></pre>
+      </div>
     </div>
   </section>
 
